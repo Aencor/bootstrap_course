@@ -64,8 +64,20 @@
 
   &.card-sec{
     border-radius: 5px;
-    border: 2px solid $colorPrimario;
-    background-color: $white;
+    border : {
+      width: 2px;
+      style : solid;
+      color : $colorPrimario;
+    }
+    background : {
+      color: rgba($colorTerciario, .2);
+      image: url('../img/image-bg.png');
+      size: 100px;
+      repeat: no-repeat;
+      position-x: 10px;
+      position-y: bottom 10px;
+    }
+    box-shadow: 10px 10px 15px rgba(0,0,0,.5);
     .card-head{
       figure{
         width: 100%;
@@ -92,6 +104,26 @@
       justify-content: flex-end;
       padding-top: 10px;
       border-top: 1px solid rgba($black, .3);
+      .btn-border{
+        &:before{
+          content: ' ';
+          position: absolute;
+          background-color: $colorTerciario;
+          top: 0;
+          left: inherit !important;
+          right: 0 !important;
+        }
+        &:hover{
+          padding-right: 30px;
+          &:before{
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    &:hover{
+      transform :translateY(-20px) scale(0.93);
     }
   }
 }
