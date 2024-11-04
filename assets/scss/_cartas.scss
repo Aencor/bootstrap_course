@@ -1,0 +1,97 @@
+#cards{
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media(max-width:768px){
+    gap: 20px;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media(max-width:460px){
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.card{
+  border-radius: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: rgba($colorTerciario, .6);
+  transition: 1s;
+  img{
+    opacity: .7;
+    transition: 1s;
+  }
+  h2{
+    color: $white;
+    font-size: $fontL;
+    margin-bottom: 0;
+  }
+  h3{
+    font-size: $fontM;
+    color: $white;
+  }
+
+  .btn{
+    display: block;
+    text-align: center;
+    color: $white;
+    background-color: $colorPrimario;
+    padding: 10px;
+    font-size: $fontM - 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    transition: .2s;
+    &:hover{
+      background-color: $colorSecundario;
+    }
+  }
+
+  &:hover{
+    background-color: rgba($colorTerciario, 1);
+    box-shadow: 0 0 10px rgba($black, .4);
+    transform :translateY(-20px) scale(1.03);
+    img{
+      opacity: 1;
+    }
+  }
+
+  &.card-sec{
+    border-radius: 5px;
+    border: 2px solid $colorPrimario;
+    background-color: $white;
+    .card-head{
+      figure{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin: 0;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .card-content{
+      h2{
+        margin-top: 0;
+        color: $black;
+        border-bottom: 1px solid $colorPrimario;
+      }
+    }
+
+    .card-footer{
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 10px;
+      border-top: 1px solid rgba($black, .3);
+    }
+  }
+}

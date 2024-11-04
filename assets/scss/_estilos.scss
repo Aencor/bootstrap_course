@@ -1,3 +1,9 @@
+.container{
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .primario{
   color: $colorPrimario;
   font-size: $fontXL;
@@ -18,54 +24,4 @@
   padding: $fontM;
   width: $fontXL + $fontL + 500px;
   background-color: rgba($colorSecundario, .6);
-}
-
-.card{
-  border-radius: 15px;
-  display: inline-flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 30px;
-  background-color: rgba($colorTerciario, .6);
-  transition: 1s;
-  img{
-    opacity: .7;
-    transition: 1s;
-  }
-  h2{
-    color: $white;
-    font-size: $fontL;
-    margin-bottom: 0;
-  }
-  h3{
-    font-size: $fontM;
-    color: $white;
-  }
-
-  .btn{
-    display: block;
-    text-align: center;
-    color: $white;
-    background-color: $colorPrimario;
-    padding: 10px;
-    font-size: $fontM - 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    transition: .2s;
-    &:hover{
-      background-color: $colorSecundario;
-    }
-  }
-
-  &:hover{
-    background-color: rgba($colorTerciario, 1);
-    box-shadow: 0 0 10px rgba($black, .4);
-    transform :translateY(-20px) scale(1.03);
-    img{
-      opacity: 1;
-    }
-  }
 }
