@@ -1,0 +1,29 @@
+.titulo{
+  border-bottom: 2px solid #FF0000;
+  span{
+    display: inline-block;
+    padding: 5px;
+    a{
+      color: #FF0000;
+    }
+  }
+  @media (min-width:768px){
+    border-color: blue;
+  }
+  @media (min-width:1024px){
+    border-color: green;
+  }
+}
+
+// Variables
+$fontXL : 70px;
+$fontL : 50px;
+$fontM : 30px;
+
+$white : #FFF;
+$black : #000;
+$colorPrimario : #c29ffa;
+$colorSecundario : #6ea8fe;
+$colorTerciario : green;
+
+@import 'estilos';

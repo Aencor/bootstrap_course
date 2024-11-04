@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    header{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav{
+    }
+
+    nav ul{
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    nav ul li{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>  
+    <h1>Ejemplo Flexbox</h1>
+
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="flexbox.html">Flexbox</a></li>
+        <li><a href="grid.html">Grid</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>

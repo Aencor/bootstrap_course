@@ -1,0 +1,59 @@
+.primario{
+  color: $colorPrimario;
+  font-size: $fontXL;
+}
+
+.secundario{
+  color: $colorSecundario;
+  font-size: $fontM;
+}
+
+.terciario{
+  color: $colorTerciario;
+  font-size: $fontL;
+}
+
+.box{
+  border: 2px solid $colorPrimario;
+  padding: $fontM;
+  width: $fontXL + $fontL + 500px;
+  background-color: rgba($colorSecundario, .6);
+}
+
+.card{
+  border-radius: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 30px;
+  background-color: rgba($colorTerciario, .6);
+  img{
+    opacity: .7;
+  }
+  h2{
+    color: $white;
+    font-size: $fontL;
+    margin-bottom: 0;
+  }
+  h3{
+    font-size: $fontM;
+    color: $white;
+  }
+
+  .btn{
+    display: block;
+    text-align: center;
+    color: $white;
+    background-color: $colorPrimario;
+    padding: 10px;
+    font-size: $fontM - 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    &:hover{
+      background-color: $colorSecundario;
+    }
+  }
+}
