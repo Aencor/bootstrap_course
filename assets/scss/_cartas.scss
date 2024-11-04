@@ -70,7 +70,6 @@
       color : $colorPrimario;
     }
     background : {
-      color: rgba($colorTerciario, .2);
       image: url('../img/image-bg.png');
       size: 100px;
       repeat: no-repeat;
@@ -78,6 +77,21 @@
       position-y: bottom 10px;
     }
     box-shadow: 10px 10px 15px rgba(0,0,0,.5);
+    &:nth-child(odd){ // Impares
+      background-color: rgba($colorTerciario, .2);
+    }
+    &:nth-child(even){ // Pares
+      background-color: $white;
+    }
+    &:nth-child(3){ // Arreglo
+      background-color: red;
+    }
+    &:first-child{ // Primer Elemento
+      background-color: $colorPrimario;
+    }
+    &:last-child{ // Último Elemento
+      background-color: $colorSecundario;
+    }
     .card-head{
       figure{
         width: 100%;
