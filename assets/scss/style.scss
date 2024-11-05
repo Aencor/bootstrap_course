@@ -30,8 +30,8 @@ $colorPrimario : #c29ffa;
 $colorSecundario : #6ea8fe;
 $colorTerciario : green;
 
-@import 'botones';
-@import 'estilos';
-@import 'medios';
-@import 'cartas';
-@import 'cover';
+@import 'elementos/botones';
+@import 'elementos/cartas';
+@import 'globales/estilos';
+@import 'globales/medios';
+@import 'globales/cover';
