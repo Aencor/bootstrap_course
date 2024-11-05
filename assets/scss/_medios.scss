@@ -5,13 +5,26 @@
 .blog-wrap{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  @media(max-width:768px){
+    grid-template-columns: 1fr;
+  }
 }
 
 img{
   max-width: 100%;
   height: auto;
+}
+
+.post-thumbnail{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* Aspect Ratio de 16:9 */
+  background-color: red;
+  background-size: cover;
+  background-position: center;
 }
 
 .video-wrap{
@@ -20,7 +33,7 @@ img{
   width: 100%;
   padding-top: 56.25%; /* Aspect Ratio de 16:9 */
   background-color: red;
-  iframe{
+  iframe, video{
     position: absolute;
     top: 0;
     left: 0;
