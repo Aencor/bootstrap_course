@@ -12,7 +12,7 @@
   <nav class="navbar navbar-expand-sm navbar-dark bg-secondary shadow-lg">
     <div class="container">
       <a class="navbar-brand" href="api.html">
-        <img src="assets/img/logos/dbs.png" class="w-25" alt="">
+        <img src="assets/img/logos/dbs.png" class="logo w-25" alt="">
       </a>
       <button
         class="navbar-toggler d-lg-none"
@@ -42,18 +42,18 @@
   <div id="characters-container" class="text-bg-dark py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 mb-5 md-mb-0">
           <h5>Otros Personajes</h5>
           <hr>
           <div id="character-menu"></div>
         </div>
         <div class="col-md-9">
-          <h1 class="mb-5 fw-bold text-danger">Ficha de <span id="character-name"></span></h1>
+          <h1 class="mb-3 fw-bold text-danger">Ficha de <span id="character-name"></span></h1>
           <div class="row data-load">
             <!-- Aquí irá la info del personaje -->
             <div id="character-detail">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-sm-4 col-md-8">
                   <div id="character-picture" class="border border-3 border-danger mb-3 text-bg-light"></div>
 
                   <div id="character-data">
@@ -77,7 +77,7 @@
 
                   <div id="character-description"></div>
                 </div>
-                <div class="col">
+                <div class="col col-sm-8 col-md-4">
                   <div id="character-metadata">
                     <h3>Información Extra del personaje</h3>
                     <div class="table-responsive">
@@ -108,7 +108,7 @@
                     
                   </div>
 
-                  <div id="character-transform"></div>
+                  <div id="character-transform" class="d-none d-sm-block"></div>
                 </div>
               </div>
             </div>
