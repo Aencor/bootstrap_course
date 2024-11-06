@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </li>
                   </ul>
 
-                    <a href="personaje.html?id=${id}" class="btn btn-sm btn-danger">Ver Más</a>
+                    <a href="personaje.html?id=${id}" class="btn db-btn btn-lg btn-danger">Ver Más</a>
                 </div>
 
                 <div class="card-footer w-100">

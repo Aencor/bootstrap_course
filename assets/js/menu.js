@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             var name = character.name,
                 image = character.image,
                 id = character.id;
-            characterCard.innerHTML = `<li><a class="mb-3 w-100 btn btn-primary btn-md" href="personaje.html?id=${id}">${name}</a></li>`;
+            characterCard.innerHTML = `<li><a style="background-image: url(${image})" class="mb-3 w-100 btn btn-primary db-btn btn-lg" href="personaje.html?id=${id}">${name}</a></li>`;
 
             // Agregar la tarjeta al contenedor
             charactersContainer.appendChild(characterCard);
