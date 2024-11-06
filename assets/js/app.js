@@ -19,14 +19,34 @@ document.addEventListener("DOMContentLoaded", () => {
         data.items.forEach(character => {
           if (character.name && character.image) {
             const characterCard = document.createElement("div");
-            characterCard.classList.add("col-md-3", "mb-4");
+            characterCard.classList.add("col-md-4", "mb-4");
             var name = character.name,
-                image = character.image;
+                image = character.image,
+                affi = character.affiliation,
+                desc = character.description,
+                gender = character.gender,
+                ki = character.ki,
+                maxKi = character.maxKi,
+                race = character.race;
+                id = character.id;
             characterCard.innerHTML = `
-              <div class="card h-100 text-center">
-                <img src="${image}" class="card-img-top" alt="${name}">
-                <div class="card-body">
-                  <h5 class="card-title">${name}</h5>
+              <div class="card h-100 d-flex flex-column align-items-center text-center border border-primary border-3 rounded-3">
+                <div class="character-pic my-3 border border-2 border-success rounded-circle" style="background-image:url(${image})"></div>
+                <div class="card-body w-100">
+                  <h2 class="card-title">${name}</h5>
+                  <div class="metas w-75 m-auto bg-primary-subtle d-flex flex-column gap-1">
+                    <div><span class="text-danger fw-bold">Raza :</span> ${race}</div>
+                    <div><span class="text-danger fw-bold">Afiliación :</span> ${affi}</div>
+                    <div><span class="text-danger fw-bold">Género :</span> ${gender}</div>
+                  </div>
+                </div>
+
+                <div class="card-footer w-100">
+                  <div class="d-flex justify-content-between">
+                    <div class="fs-6">Ki : <strong>${ki}</strong></div>
+                    <a href="single.html?id=${id}" class="btn btn-sm btn-secondary">Ver Más</a>
+                    <div class="fs-6">Max Ki : <strong>${maxKi}</strong></div>
+                  </div>
                 </div>
               </div>
             `;
