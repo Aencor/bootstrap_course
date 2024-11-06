@@ -34,17 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="character-pic my-3 border border-2 border-success rounded-circle" style="background-image:url(${image})"></div>
                 <div class="card-body w-100">
                   <h2 class="card-title">${name}</h5>
-                  <div class="metas w-75 m-auto bg-primary-subtle d-flex flex-column gap-1">
-                    <div><span class="text-danger fw-bold">Raza :</span> ${race}</div>
-                    <div><span class="text-danger fw-bold">Afiliación :</span> ${affi}</div>
-                    <div><span class="text-danger fw-bold">Género :</span> ${gender}</div>
-                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <span class="text-danger fw-bold">Raza :</span> ${race}
+                    </li>
+                    <li class="list-group-item">
+                      <span class="text-danger fw-bold">Afiliación :</span> ${affi}
+                    </li>
+                    <li class="list-group-item">
+                      <span class="text-danger fw-bold">Género :</span> ${gender}
+                    </li>
+                  </ul>
+
+                    <a href="personaje.html?id=${id}" class="btn btn-sm btn-danger">Ver Más</a>
                 </div>
 
                 <div class="card-footer w-100">
                   <div class="d-flex justify-content-between">
                     <div class="fs-6">Ki : <strong>${ki}</strong></div>
-                    <a href="single.html?id=${id}" class="btn btn-sm btn-secondary">Ver Más</a>
                     <div class="fs-6">Max Ki : <strong>${maxKi}</strong></div>
                   </div>
                 </div>
