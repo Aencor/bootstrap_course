@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "https://dragonball-api.com/api/characters";
+  const apiUrl = "https://dragonball-api.com/api/characters?limit=50";
   const charactersContainer = document.querySelector("#characters-container .row.data-load");
 
   fetch(apiUrl)
