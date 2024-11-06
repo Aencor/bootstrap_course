@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 document.addEventListener("DOMContentLoaded", () => {
   const apiUrl = "https://dragonball-api.com/api/characters";
   const charactersContainer = document.querySelector("#character-menu");
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             var name = character.name,
                 image = character.image,
                 id = character.id;
-            characterCard.innerHTML = `<li><a style="background-image: url(${image})" class="mb-3 w-100 btn btn-primary db-btn btn-lg" href="personaje.html?id=${id}">${name}</a></li>`;
+            characterCard.innerHTML = `<li><a style="background-image: url(${image})" data-bs-toggle="tooltip" data-bs-title="Ver Personaje" class="mb-3 w-100 btn btn-primary db-btn btn-lg" href="personaje.html?id=${id}">${name}</a></li>`;
 
             // Agregar la tarjeta al contenedor
             charactersContainer.appendChild(characterCard);

@@ -24,3 +24,26 @@
     repeat: no-repeat;
   }
 }
+
+.progress-bar{
+  animation-name: progress;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  background: linear-gradient($yellow 0%, $red 100%);
+}
+
+@keyframes progress{
+  0%{
+    width: 0;
+    background: rgba($orange, 0);
+  }
+  50%{
+    background: rgba($yellow, .5);
+  }
+  100%{
+    background: rgba($red, 1);
+    width: 80%;
+  }
+}
