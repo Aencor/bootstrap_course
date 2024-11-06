@@ -101,14 +101,15 @@
 
         <div class="col">
           <div class="card">
-            <img src="assets/img/2x1_Hub_TheLegendOfZelda_ToTK-1.webp" class="card-img-top" alt="...">
+            <a href="" data-bs-toggle="modal" data-bs-target="#modalImage">
+            <img src="assets/img/2x1_Hub_TheLegendOfZelda_ToTK-1.webp" class="card-img-top" alt="..."></a>
             <div class="card-body p-5">
               <h3 class="card-title">Card title</h3>
               <h5>Categoría <a href="">Noticias</a></h5>
               <hr class="border border-2">
               <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <div class="d-flex text-end justify-content-end">
-                <a href="#" class="btn btn-primary btn-md">Go somewhere</a>
+                <a href="#" class="btn btn-primary btn-md" data-bs-toggle="modal" data-bs-target="#modalImage">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -397,7 +398,7 @@
             <a href="" class="btn btn-danger btn-lg">Click</a>
           </div>
           <div class="col-md-8">
-            <img class="img-fluid" src="assets/img/bigBG.webp" alt="">
+            <img class="img-fluid" src="assets/img/image-bg-1.webp" alt="">
           </div>
         </div>
       </div>
@@ -456,27 +457,40 @@
   </footer>
 
   <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="video-wrap">
-          <video controls>
-            <source src="assets/video/test-video.mp4" type="video/mp4">
-          </video>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal-body">
+          <div class="video-wrap">
+            <video controls>
+              <source src="assets/video/test-video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="modal fade" id="modalImage" tabindex="-1" aria-labelledby="modalImageLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-big">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/img/2x1_Hub_TheLegendOfZelda_ToTK-1.webp" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

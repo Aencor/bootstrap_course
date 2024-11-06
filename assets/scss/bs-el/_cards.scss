@@ -10,6 +10,21 @@
     flex-direction: column;
     justify-content: center;
   }
+  .card-header{
+    background-color: red;
+    h1,h2,h3,h4,h5,h6{
+      color: white;
+    }
+    @media(min-width:480px){
+      background-color: blue;
+    }
+    @media(min-width:768px){
+      background-color: green;
+    }
+    @media(min-width:1280px){
+      background-color: goldenrod;
+    }
+  }
 }
 
 #pricing{
