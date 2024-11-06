@@ -39,15 +39,43 @@
   </nav>
   
 
-  <div id="characters-container" class="my-3 py-3">
+  <div id="planets-container" class="text-bg-dark py-5">
     <div class="container">
-      <h1 class="mb-5 text-center fw-bold text-danger">Información de personajes de Dragon Ball</h1>
-      <div class="row data-load">
-        <!-- Aquí iran los personajes -->
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Otros Planetas</h5>
+          <hr>
+          <div id="planet-menu"></div>
+        </div>
+        <div class="col-md-9">
+          <h1 class="mb-5 fw-bold text-danger">Información de <span id="planet-name"></span></h1>
+          <div class="row data-load">
+            <!-- Aquí irá la info del personaje -->
+            <div id="planet-detail">
+              <div class="row">
+                <div class="col-md-12">
+                  <div id="planet-picture" class="border border-3 border-danger mb-3 text-bg-light"></div>
+
+                  <div id="planet-data">
+                    <div id="planet-desc"></div>
+                  </div>
+
+                  <hr>
+
+                  <div id="planet-description"></div>
+
+                  <div id="planet-characters" class="mt-5 row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/planet.js"></script>
+  <script src="assets/js/menu-planet.js"></script>
 </body>
 </html>
