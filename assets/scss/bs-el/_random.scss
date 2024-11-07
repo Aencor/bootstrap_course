@@ -16,7 +16,7 @@ $white : #FFF;
 
 @for $i from 1 through 5{
   .base-color-#{$i}{
-    color : lighten($white, $i / 5%);
+    color : lighten($white, $i * 5%);
     padding: 5px * $i;
     background-color: lighten($baseColor, $i * 5%);
   }

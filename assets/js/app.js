@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Verificamos si `data.items` es un arreglo y lo procesamos
       if (Array.isArray(data.items)) {
         charactersContainer.innerHTML = '';
-
+        let i = 0;
         data.items.forEach(character => {
           if (character.name && character.image) {
             const characterCard = document.createElement("div");
@@ -28,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 ki = character.ki,
                 maxKi = character.maxKi,
                 race = character.race;
-                id = character.id;
+                id = character.id,
+                x = i++;
             characterCard.innerHTML = `
-              <div class="card h-100 d-flex flex-column align-items-center text-center border border-primary border-3 rounded-3">
+              <div class="card h-100 card-${x} d-flex flex-column align-items-center text-center border border-primary border-3 rounded-3">
                 <div class="character-pic my-3 border border-2 border-success rounded-circle" style="background-image:url(${image})"></div>
                 <div class="card-body w-100">
                   <h2 class="card-title">${name}</h5>

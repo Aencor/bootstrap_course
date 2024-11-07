@@ -32,3 +32,20 @@
     border-color: $orange;
   }
 }
+
+#character-menu{
+  @for $i from 1 through 10{
+    nav{
+      &:nth-child(#{$i}){
+        a{
+          background-color: lighten($red, $i * 2%) !important; 
+
+          @if($i == 10){
+            background-color: rgba($black, .1) !important;
+            color: $white !important;
+          }
+        }
+      }
+    }
+  }
+}

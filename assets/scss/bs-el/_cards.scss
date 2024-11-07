@@ -65,3 +65,12 @@
     }
   }
 }
+
+@for $i from 0 through 40{
+  .card-#{$i}{
+    border-color: mix($red, $orange, $i * 2% ) !important;
+    .btn{
+      background-color: mix($brown, $red, $i * 2.5%) !important;
+    }
+  }
+}
