@@ -1,0 +1,270 @@
+@import 'variables';
+body{
+  background-color: $red;
+  .container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+
+    .face{
+      position: relative;
+      width: 500px;
+      height: 400px;
+      background-color: $skin;
+      border : {
+        top-left-radius : 110%;
+        top-right-radius : 110%;
+        bottom-left-radius : 200%;
+        bottom-right-radius : 200%;
+      }
+
+      .oreja{
+        width: 140px;
+        height: 230px;
+        background-color: $brown;
+        position: absolute;
+        z-index: 100;
+        &.derecha-ear{
+          left: -40px;
+          box-shadow: 5px 5px 2px $darkBrown;
+          border-radius: 200% 30% 200% 60%;
+          animation: 3s moverOreja infinite;
+        }
+        &.izquierda-ear{
+          border-radius: 30% 200% 60% 200%;
+          right: -60px;
+          box-shadow: -5px 5px 2px $darkBrown;
+        }
+      }
+    }
+    .lentes{
+      width: 500px;
+      height: 160px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(70px);
+      animation-duration: 4s;
+      animation-delay: 2s;
+      animation-name: moverLente;
+      animation-fill-mode: both;
+      .lente{
+        position: absolute;
+        border: 18px solid $red;
+        width: 200px;
+        height: 100%;
+        &.derecho-glass{
+          right: 0;
+          border-radius: 30% 10% 30% 40%;
+        }
+
+        &.izquierdo-glass{
+          left: 0;
+          border-radius: 10% 30% 40% 30%;
+        }
+      }
+
+      .sujetador{
+        width: 65px;
+        height: 0px;
+        border-top: 30px solid $red;
+        border-radius: 300% 300% 0 0;
+        position: absolute;
+        left: 50%;
+        top: 40px;
+        transform: translateX(-50%);
+      }
+    }
+
+    .ojo{
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      background-color: $blanco;
+      top: 100px;
+      border-radius: 100%;
+      .retina{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: $black;
+        border-radius: 100%;
+        top: 15px;
+        &.izquierdo{
+          left: 0;
+          animation: bizcoDer 2.5s linear 3s 1;
+        }
+
+        &.derecho{
+          right: 0;
+          animation: bizcoIzq 2.5s linear 3s 1;
+        }
+      }
+
+      &.eye-derecho{
+        right: 20%;
+      }
+      &.eye-izquierdo{
+        left: 20%;
+      }
+    }
+
+    .hocico{
+      position: absolute;
+      z-index: 10;
+      width: 180px;
+      height: 180px;
+      left: 50%;
+      transform: translate(-50%, 200px) rotate(45deg);
+      .punto{
+        position: absolute;
+        z-index: 10;
+        width: 50%;
+        height: 30%;
+        border-radius: 100%;
+        border-top: 40px solid $brown;
+        border-left: 40px solid $brown;
+        top: 0;
+        left: 10px;
+        transform: rotate(-45deg) translateX(-20px);
+      }
+
+      .labio-derecho{
+        position: absolute;
+        z-index: 10;
+        width: 85%;
+        height: 50%;
+        border-radius: 50px;
+        background-color: $brown;
+        left: 40px;
+      }
+
+      .labio-izquierdo{
+        position: absolute;
+        z-index: 10;
+        width: 50%;
+        height: 85%;
+        border-radius: 100px 120px;
+        background-color: $brown;
+        top: 40px;
+      }
+
+      .labio-inferior{
+        width: 150px;
+        height: 150px;
+        z-index: 2;
+        background-color: $brown;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100% 129px 129px 100%;
+      }
+
+      .labio-superior{
+        position: absolute;
+        width: 100px;
+        border-top: 40px solid $darkBrown;
+        z-index: 4;
+        transform: rotate(135deg) translateX(20%) translateY(-70px);
+      }
+    }
+
+    .nariz{
+      background-color: $black;
+      width: 80px;
+      height: 50px;
+      position: absolute;
+      z-index: 15;
+      transform: rotate(135deg) translateX(10px) translateY(-17px);
+      border-radius: 100% / 80%;
+    }
+
+    .lengua{
+      background-color: $pink;
+      width: 80px;
+      height: 50px;
+      position: absolute;
+      z-index: 3;
+      border-radius: 0 70% 70% 0;
+      top: 50%;
+      left: 43%;
+      animation: 1s jadeo infinite;
+      .sombra{
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 60px solid $red;
+        transform: translate(6px, 15px);
+        position: absolute;
+      }
+    }
+  }
+}
+
+@keyframes jadeo{
+  0%{
+    transform: rotate(45deg) translateX(10px);
+  }
+  50%{
+    transform: rotate(45deg) translateX(-15px);
+  }
+  100%{
+    transform: rotate(45deg) translateX(10px);
+  }
+}
+
+@keyframes moverOreja {
+    0%{
+      transform-origin: top;
+      transform: rotate(10deg);
+    }
+    50%{
+      transform-origin: top;
+      transform: rotate(15deg);
+    }
+    100%{
+      transform-origin: top;
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes moverLente {
+
+  50%{
+    transform: translateX(-50%) translateY(100px);
+  }
+
+  100%{
+    transform: translateX(50%) translateY(-370px) rotate(180deg);
+  }
+}
+
+@keyframes bizcoDer{
+  50%{
+    left: 30px;
+    top: 33px;
+  }
+  75%{
+    left: 20px;
+    top: 23px;
+  }
+  100%{
+    left: 0;
+    top: 15px;
+  }
+}
+
+@keyframes bizcoIzq{
+  50%{
+    right: 30px;
+    top: 33px;
+  }
+  100%{
+    right: 0;
+    top: 15px;
+  }
+}
