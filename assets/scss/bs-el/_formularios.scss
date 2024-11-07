@@ -1,0 +1,23 @@
+.form-check{
+  input[type=radio]{
+    position: relative;
+    width: 0;
+    height: 0;
+    &:after{
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/img/icons/radio.png');
+    }
+
+    &:checked{
+      &:after{
+        background-image: url('../../assets/img/icons/radio-check.png');
+      }
+    }
+  }
+}
