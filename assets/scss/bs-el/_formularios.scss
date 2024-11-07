@@ -1,3 +1,7 @@
+.form-title{
+  @extend .dark-text;
+}
+
 .form-check{
   input[type=radio]{
     position: relative;
@@ -42,5 +46,15 @@
         background-image: url('../../assets/img/icons/checked.png');
       }
     }
+  }
+}
+
+.form-label{
+  @include media(mobile_small){
+    @include make-lead;
+  }
+  @include media(tablet){
+    color: red;
+    @include px(10px);
   }
 }

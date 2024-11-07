@@ -9,7 +9,7 @@
 </head>
 <body class="text-bg-dark">
   <div class="container">
-    <h1 class="text-center m-3">Formularios</h1>
+    <h1 class="text-center m-3 form-title">Formularios</h1>
     <div class="row">
       <div class="col-6 m-auto">
         <form action="" class="needs-validation" novalidate>
@@ -45,30 +45,35 @@
           <div class="row mb-3">
             <div class="col">
               <label for="date" class="form-label">Día de Inicio</label>
-              <input type="date" class="form-control" id="date">
+              <input type="date" class="form-control" id="date" required>
             </div>
           </div>
 
           <div class="row mb-3">
             <div class="col">
               <label for="daterange" class="form-label">Horas de Visita</label>
-              <input type="time" id="daterange" class="form-control">
+              <input type="time" id="daterange" class="form-control" required>
             </div>
           </div>
 
           <div class="row mb-3">
             <div class="col">
               <label for="file" class="form-label">Documento</label>
-              <input type="file" class="form-control" id="file">
+              <input type="file" class="form-control" id="file" required>
             </div>
 
             <div class="col">
               <label for="tipo" class="form-label">Tipos</label>
-              <select name="tipo" id="tipo" class="form-control">
-                <option value="#">Selecciona uno</option>
+              <select name="tipo" id="tipo" class="form-select" required>
+                <option value="" selected disabled>Selecciona uno</option>
                 <option value="1">Opción 1</option>
                 <option value="2">Opción 2</option>
               </select>
+
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+
             </div>
           </div>
 
@@ -105,6 +110,7 @@
             </div>
           </div>
         </form>
+
       </div>
     </div>
   </div>

@@ -4,3 +4,32 @@
   align-items: center;
   max-width: 80%;
 }
+
+.dark-text{
+  font-weight: bold;
+  color: $black;
+  font-size: 3rem;
+}
+
+$baseColor : #036;
+$white : #FFF;
+
+@for $i from 1 through 5{
+  .base-color-#{$i}{
+    color : lighten($white, $i / 5%);
+    padding: 5px * $i;
+    background-color: lighten($baseColor, $i * 5%);
+  }
+}
+
+$sizes : 8px, 10px, 15px, 20px, 40px, 60px;
+
+@each $size in $sizes{
+  .h-#{$size}{
+    font-size: $size;
+  }
+}
+
+h1{
+  @extend .h-60px;
+}
