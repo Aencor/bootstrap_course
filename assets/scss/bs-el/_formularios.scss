@@ -3,6 +3,7 @@
     position: relative;
     width: 0;
     height: 0;
+    border: 0;
     &:after{
       top: 0;
       left: 0;
@@ -17,6 +18,28 @@
     &:checked{
       &:after{
         background-image: url('../../assets/img/icons/radio-check.png');
+      }
+    }
+  }
+
+  input[type=checkbox]{
+    width: 0;
+    height: 0;
+    border: 0;
+    position: relative;
+    &:after{
+      content: ' ';
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-image: url('../../assets/img/icons/check.png');
+      background-size: cover;
+      position: absolute;
+    }
+
+    &:checked{
+      &:after{
+        background-image: url('../../assets/img/icons/checked.png');
       }
     }
   }
